@@ -26,7 +26,7 @@ namespace Supervisor_RestfulAPI.Controllers
 
     [HttpPost]
     [Route("api/submit")]
-    public IActionResult newEmployee(Employee e)
+    public void Post(Employee e)
     {
       PrintObj(e);
 
@@ -35,8 +35,9 @@ namespace Supervisor_RestfulAPI.Controllers
         if (e.FName == "" || e.LName == "" || e.Supervisor == "")
         {
           Response.StatusCode = 402;
-          return "";
+          return;
         }
+
         Response.StatusCode = 200;
       }
       catch(Exception f)
