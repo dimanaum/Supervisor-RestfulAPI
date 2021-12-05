@@ -12,11 +12,11 @@ namespace Supervisor_RestfulAPI.Controllers
 
     private void PrintObj(Employee e)
     {
-      System.Diagnostics.Debug.WriteLine("firstName: " + e.FName);
-      System.Diagnostics.Debug.WriteLine("lastName: " + e.LName);
-      System.Diagnostics.Debug.WriteLine("email: " + e.Email);
-      System.Diagnostics.Debug.WriteLine("phoneNumber: " + e.Phone);
-      System.Diagnostics.Debug.WriteLine("supervisor: " + e.Supervisor);
+      Console.WriteLine("firstName: " + e.FName);
+      Console.WriteLine("lastName: " + e.LName);
+      Console.WriteLine("email: " + e.Email);
+      Console.WriteLine("phoneNumber: " + e.Phone);
+      Console.WriteLine("supervisor: " + e.Supervisor);
     }
 
     public SubmitController(ILogger<SupervisorController> logger)
@@ -30,6 +30,7 @@ namespace Supervisor_RestfulAPI.Controllers
     {
       PrintObj(e);
 
+      //TODO: Impliment more than response codes.
       try
       {
         if (e.FName == "" || e.LName == "" || e.Supervisor == "")
