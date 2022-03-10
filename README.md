@@ -6,4 +6,3 @@ This application was written as a submission for the coding challenge provided b
 Code Structure:
 Controllers:
 - SupervisorController: Handles the GET requests. This controller is responsible for parsing the manager data from the provided URL and sorting it alphabetically.
-- SubmitController: Handles
